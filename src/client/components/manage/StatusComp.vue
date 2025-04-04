@@ -1,5 +1,5 @@
 <template>
     <div>  
-        Status
+        this is the status of the project
     </div>
 </template>
