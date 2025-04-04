@@ -1,5 +1,5 @@
 <template>
     <div>
-        Project
+        Download Invoice
     </div>
 </template>

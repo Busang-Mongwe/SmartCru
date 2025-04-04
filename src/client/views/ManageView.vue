@@ -1,25 +1,40 @@
 <template>
-    <div class="manage-container" >
-        <ProjectComp/>
+    <div class="manage-btn">
+        <button @click="componentId = 'ProjectComp'">Project</button>
+        <button @click="componentId = 'StatusComp'">Status</button>
+
+        <component :is="componentId"></component>
     </div>
 </template>
-<script>
+
+<script> 
 import ProjectComp from '../components/manage/ProjectComp.vue';
+import StatusComp from '../components/manage/StatusComp.vue';
 
 export default{
+    name: 'ManageView',
+    data(){
+        return{
+            componentId: ''
+        };
+    },
     components: {
         ProjectComp,
+        StatusComp
     }
 }
 
 </script>
-
-<style>
-.manage-container{
+<style scoped>
+.manage-btn{
     position: absolute;
-    top: 24px;
-    height: 32vh;
-    width: 60%;
-    background-color: white;
+    top: 108px;
+    background: none;
+    border: none;
+}
+button{
+    padding: 8px;
+    margin: 0 4px;
+    width: 90px;
 }
 </style>

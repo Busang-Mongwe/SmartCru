@@ -1,5 +1,5 @@
 <template>
     <div>
-        Project
+        Accept / Decline
     </div>
 </template>
