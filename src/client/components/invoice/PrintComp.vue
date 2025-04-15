@@ -1,18 +1,18 @@
 <template>
-    <div class="view-container">
+    <div class="print-container">
         <!--Waiting Invoice format document for smartcru tech-->
-        View Generated invoice
+        Print Invoice
     </div>
 </template>
 
 <script>
 export default{
-    name: "DownloadView",
+    name: "PrintComp",
 }
 </script>
 
-<style>
-    .view-container{
+<style scoped>
+    .print-container{
         width: 70%;
         margin: 4px auto;
         border: solid 1px #ddd;

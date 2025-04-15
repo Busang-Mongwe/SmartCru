@@ -1,24 +1,26 @@
 <template>
     <div class="invoice-comp">
-        <button @click="currentComponent='PrintComp'">Print Invoice</button>
-        <button @click="currentComponent='ViewComp'">View Invoice</button>
+        <button @click="currentComponent='InvoiceComp'">Generate Invoice</button>
+        <button @click="currentComponent='StatusComp'">Invoice Status</button>
     </div>
     <component :is="currentComponent"></component>
 </template>
 
 <script>
-import PrintComp from '../components/invoice/PrintComp.vue';
-import ViewComp from '../components/invoice/ViewComp.vue';
+import InvoiceComp from '../components/admin-invoice/InvoiceComp.vue';
+import StatusComp from '../components/admin-invoice/StatusComp.vue';
 
 export default{
+    name: 'AdminInvoice',
+
     data(){
         return{
-            currentComponent: "PrintComp",
+            currentComponent: 'InvoiceComp',
         };
     },
     components:{
-        PrintComp,
-        ViewComp,
+        InvoiceComp,
+        StatusComp,
     }
 }
 </script>

@@ -1,31 +1,31 @@
 <template>
-    <div class="manage-comp">
-        <button @click="currentComponet='ProjectComp'">Project</button>
-        <button @click="currentComponet='StatusComp'">Status</button>
+    <div class="inbox-comp">
+        <button @click="currentComponet='MessageComp'">Message</button>
+        <button @click="currentComponet='ResponseComp'">Reply</button>
     </div>
     <component :is="currentComponet"></component>
 </template>
 
 <script>
-import ProjectComp from '../components/manage/ProjectComp.vue';
-import StatusComp from '../components/manage/StatusComp.vue';
+import MessageComp from '../components/admin-inbox/MessageComp.vue';
+import ResponseComp from '../components/admin-inbox/ResponseComp.vue';
 
     export default{
-        name: "ManageView",
+        name: "InboxView",
         data(){
             return{
-                currentComponet: 'ProjectComp'
+                currentComponet: 'MessageComp'
             };
         },
         components: {
-            ProjectComp,
-            StatusComp,
+            MessageComp,
+            ResponseComp,
         }
     }
 </script>
 
 <style scoped>
-    .manage-comp{
+    .inbox-comp{
         margin: 10px auto;
         width: 25%;
         text-align: center;
@@ -42,10 +42,10 @@ import StatusComp from '../components/manage/StatusComp.vue';
         border-bottom: solid 2px blue;
         cursor: pointer; 
     }
-
     @media only screen and (max-width: 960px){
-        .manage-comp{
-            margin: 20px auto;
+        .inbox-comp{
+            margin: 30px auto;
         }
     }
+
 </style>

@@ -1,18 +1,19 @@
 <template>
   <div>
-    <CompanyLogo/>
-    <NavbarComp/>
+    <NavbarComp />
+    <FooterComp />
   </div>
-  
 </template>
 
 <script>
-import CompanyLogo from './client/components/CompanyLogo.vue';
-import NavbarComp from './client/components/NavbarComp.vue';
- export default{
+import NavbarComp from './components/NavbarComp.vue';
+import FooterComp from './components/FooterComp.vue';
+export default{
+  name: "App",
   components: {
-    CompanyLogo,
     NavbarComp,
+    FooterComp,
   }
- }
+}
+
 </script>
