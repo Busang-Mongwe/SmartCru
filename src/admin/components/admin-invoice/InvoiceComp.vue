@@ -43,8 +43,8 @@
 
                 <tbody>
                     <tr v-for="item in items" :key="item">
-                        <td>{{ item.description }}</td>
-                        <td>{{ item.amount }}</td>
+                        <td><input type="text" v-model="item.description" required></td>
+                        <td><input type="number" v-model="item.amount" required></td>
                     </tr>
                 </tbody>
 
@@ -59,6 +59,11 @@
                     </tr>
                 </tfoot>
             </table>
+            <div>
+                <button type="submit" @click="addRow">Add</button>
+                <button type="submit" @click="deleteRow">Delete</button>
+                <button type="submit" @click="sendInvoice">Send</button>
+            </div>
         </div>
         
     </div>
@@ -69,7 +74,25 @@ export default {
     data(){
         return{
             companyName: "SmartCru Tech",
-            items: { description: "",  amount: ""}
+            items: [
+                { description: '', amount: null}
+            ],
+            newItems: { description: '', amount: null}
+        }
+    },
+    methods: {
+        addRow(){
+            if(!this.newItems){
+                console.log("Please fill all space")
+            }
+            else{
+                this.items.push(this.newItems)
+                this.newItems = { description: '', amount: ''}
+            }
+        },
+        deleteRow(){
+            this.items.pop(this.newItems)
+            this.newItems = { description: '', amount:''}
         }
     }
 }
@@ -133,18 +156,27 @@ img{
 form input{
     padding: 5px;
 }
+tbody input{
+    height: 20px;
+}
 table{
     border: solid 2px #ddd;
     border-collapse: collapse;
     margin-top: 30px;
 }
-table th, td{
+table th{
     border: solid 1px #ddd;
     padding: 4px;
 }
-table td{
-    background-color: aquamarine;
+table th, td{
+    background-color:aquamarine;
 }
+tbody input{
+    height: 20px;
+    margin: 0;
+    width: 98%;
+}
+
 @media only screen and (max-width: 960px){
     
     .external-company-details{
