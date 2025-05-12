@@ -22,6 +22,7 @@
         handleMessage(){
             // Emit the message to anyone listening 
             //emitter.emit('client-message', this.message)
+            // API Communication should be added.
             
             this.message = '' // Clear input after sending
         },

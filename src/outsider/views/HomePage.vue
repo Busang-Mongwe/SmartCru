@@ -1,9 +1,9 @@
 <template>
 <div class="main_container">
-    <h2 class="company_name">SmartCru Tech Solutions </h2>
-    <h3>We lead to a success</h3>
+    <h1 class="company_name">SmartCru Tech Solutions </h1>
+    <h2>We lead to a success</h2>
     <p>We pride ourselves with providing services with unquestionable quality not just that, but we are expandable.</p>
-    <router-link to="/about" >More</router-link>
+    <router-link class="more_bnt" to="/about" >More</router-link>
 </div>
 
 <!--Body Content Component-->
@@ -11,7 +11,7 @@
 
 </template>
 <script>
-import BodyContent from './outsider/components/BodyContent.vue'
+import BodyContent from '@/components/BodyContent.vue';
 export default{
     name: 'HomePage',
     components: { BodyContent },
@@ -29,15 +29,26 @@ export default{
 .company_name{
     color: #DC143C;
 }
-button{
-    height: 30px;
-    margin: auto 0;
-    background: #A9A9A9;
-    border-radius: 4px;
-    border: none;
+.main_container p {
+    font-size: 18px;
 }
-button:hover{
-    border-bottom: solid 2px blue;
-    cursor: pointer; 
+.more_bnt{
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #A9A9A9;
+    border-radius: 6px;
+    color: black;
 }
+
+ @media only screen and (max-width: 960px){
+    .main_container h1{
+        font-size: 22px;
+    }
+    .main_container h2{
+        font-size: 18px;
+    }
+    .main_container p {
+        font-size: 16px;
+}
+ }
 </style>
