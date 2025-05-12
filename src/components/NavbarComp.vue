@@ -115,6 +115,7 @@ export default{
     }
     .icon{
         padding: 0 4px;
+        color: black;
     }
 
     
