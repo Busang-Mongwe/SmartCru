@@ -1,18 +1,15 @@
 <template>
   <div>
-    <NavbarComp />
-    <FooterComp />
+    <ToolBar/>
   </div>
 </template>
 
 <script>
-import NavbarComp from './components/NavbarComp.vue';
-import FooterComp from './components/FooterComp.vue';
+import ToolBar from './outsider/ToolBar.vue';
 export default{
   name: "App",
   components: {
-    NavbarComp,
-    FooterComp,
+    ToolBar,
   }
 }
 

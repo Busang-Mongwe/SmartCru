@@ -9,7 +9,7 @@
   </template>
   
   <script>
-  import emitter from '@/eventBus';
+  //import emitter from '@/eventBus';
   
   export default{
     name: "MessageComp",
@@ -21,7 +21,7 @@
     methods: {
         handleMessage(){
             // Emit the message to anyone listening 
-            emitter.emit('client-message', this.message)
+            //emitter.emit('client-message', this.message)
             
             this.message = '' // Clear input after sending
         },

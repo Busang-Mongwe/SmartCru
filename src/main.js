@@ -5,9 +5,9 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 // Import icons you want to use
-import { faGears, faFileInvoice, faEnvelope, faUserCircle, faRightFromBracket,faUsers } from '@fortawesome/free-solid-svg-icons'
+import { faGears, faFileInvoice, faEnvelope, faUserCircle, faRightFromBracket,faUsers, faHouse} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faGears, faFileInvoice, faEnvelope, faUserCircle, faRightFromBracket,faUsers)
+library.add(faGears, faFileInvoice, faEnvelope, faUserCircle, faRightFromBracket,faUsers, faHouse )
 
 const app = createApp(App);
 app.use(router);
