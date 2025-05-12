@@ -3,7 +3,7 @@
     <h1 class="company_name">SmartCru Tech Solutions </h1>
     <h2>We lead to a success</h2>
     <p>We pride ourselves with providing services with unquestionable quality not just that, but we are expandable.</p>
-    <router-link class="more_bnt" to="/about" >More</router-link>
+    <router-link class="more_btn" to="/about" >More</router-link>
 </div>
 
 <!--Body Content Component-->
@@ -32,12 +32,16 @@ export default{
 .main_container p {
     font-size: 18px;
 }
-.more_bnt{
+.more_btn{
     text-decoration: none;
     padding: 8px 16px;
     background-color: #A9A9A9;
     border-radius: 6px;
     color: black;
+}
+.more_btn:hover{
+    border-bottom: solid 2px blue;
+    cursor: pointer; 
 }
 
  @media only screen and (max-width: 960px){
