@@ -12,8 +12,8 @@
                 mobile applications, electronics and digital marketing in various companies abroad</p>
             <router-link to="/login" class="btn">Client</router-link>
 
-            <div style="margin-top: 20px;">
-                 <img src="/lamp.ico" alt="Lamp Icon"
+            <div  style="margin-top: 20px;">
+                 <img  src="../assets/lamp.png" alt="Lamp Icon"
                  style="height: 80px; width: 80px; border: none;"  /> 
             </div>
         </div>
@@ -35,10 +35,12 @@ export default{
 <style scoped> 
 .body_content{
     display: flex;
-    width: 80%;
+    width: 98%;
     justify-content: center;
     text-align: center;
     background-color: #DCDCDC;
+    border: 2px solid #ccc;
+    border-radius: 10px;
     margin: 4px auto;
     padding: 12px;
     overflow-wrap: break-word;
@@ -77,9 +79,29 @@ img{
     border-bottom: solid 2px blue;
     cursor: pointer; 
 }
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 960px){
     .body_content{
         display: grid;
+    }
+    img{
+        height: 420px;
+        width: 420px;
+        border: solid 1px #ddd;
+        border-radius: 6px;
+        margin: 4px 0;
+    }
+    .student{
+       height: 420px;
+       width: 420px; 
+       background: #A9A9A9;
+       border-radius: 6px;
+       margin: 4px 0;
+    }
+    .student p{
+        color: black;
+        font-size: 16px;
+        margin: 2rem 0;
+        text-align: center;
     }
 }
 </style>

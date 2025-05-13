@@ -33,19 +33,37 @@
         </router-link></li>
 </ul>
 
-<button>
+<button @click="showDialog = true" class="open-btn">
     <font-awesome-icon icon="right-from-bracket" class="icon"/>
     <span>Sign-in</span>
 </button>
 
 </div>
 
+<div v-if="showDialog" class="modal-overlay" @click.self="closeDialog">
+    <div class="modal">
+        <AuthComponent/>
+    </div>
+</div>
+
 <router-view></router-view>
 </template>
 
 <script>
+import AuthComponent from '@/components/AuthComponent.vue';
 export default{
-    name: 'ToolBar'
+    name: 'ToolBar',
+    components: { AuthComponent },
+    data(){
+        return{
+            showDialog: false,
+        }
+    },
+    methods: {
+        closeDialog(){
+            this.showDialog = false
+        }
+    }
 }
 </script>
 <style scoped>
@@ -99,6 +117,28 @@ button:hover{
 .icon{
     padding: 0 4px;
     color: black;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 16px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 @media only screen and (max-width: 960px){
     .logo{

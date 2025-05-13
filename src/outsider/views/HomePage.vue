@@ -9,12 +9,16 @@
 <!--Body Content Component-->
 <BodyContent/>
 
+<!--Slide Show Component-->
+<SlideShow/>
+
 </template>
 <script>
 import BodyContent from '@/components/BodyContent.vue';
+import SlideShow from '@/components/SlideShow.vue';
 export default{
     name: 'HomePage',
-    components: { BodyContent },
+    components: { BodyContent, SlideShow },
 }
 </script>
 
