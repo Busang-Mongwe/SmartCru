@@ -32,8 +32,8 @@ export default {
         const storedUser = JSON.parse(localStorage.getItem("user"));
         if (storedUser && storedUser.email === this.email && storedUser.password === this.password) {
           alert("Login successful!");
-          //window.location.href = "/about";
-          this.$router.push('/manage')
+          window.location.href = "/manage";
+          //this.$router.push('/manage')
         } else {
           alert("Invalid credentials!");
         }

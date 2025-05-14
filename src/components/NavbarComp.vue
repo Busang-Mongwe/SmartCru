@@ -65,8 +65,7 @@ export default{
     name: "NavbarComp",
     data(){
         return{
-            user: false,
-            admin: true,
+            user: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null,
         };
     },
 }
