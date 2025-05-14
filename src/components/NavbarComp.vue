@@ -81,7 +81,7 @@ export default{
     }
     .navbar ul{
         display: flex;
-        width: 86%;
+        width: 80%;
         margin: 5px;
         padding: 10px;
         list-style-type: none;
@@ -104,7 +104,7 @@ export default{
     }
     button{
         height: 30px;
-        margin: auto 0;
+        margin: auto;
         background: #A9A9A9;
         border-radius: 4px;
         border: none;

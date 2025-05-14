@@ -4,31 +4,36 @@
     <!-- Slide Content -->
     <div v-show="current === 0" class="slide">
       <p>
-        <router-link to="/"><b>SmartCru Tech Solution</b></router-link> was founded in 2024 out of a passion for technology.
+        <router-link to="/" style="text-decoration: none; color: #DC143C;"><b>SmartCru Tech Solution</b></router-link> was founded in 2024 out of a passion for technology.
         Founded by two University of Limpopo students, SmartCru addresses the gap between graduation and industrial experience for students.
       </p>
 
       <p>
         We aim to expose students to real-world tech challenges and bridge usability gaps we observe in poorly designed websites. SmartCru offers web & mobile development, electronics, and digital marketing.
       </p>
-      <router-link class="about_btn" to="/about">About</router-link>
+      <router-link class="btn" to="/about">About</router-link>
     </div>
 
     <div v-show="current === 1" class="slide">
-      <img :src="require('@/assets/Busang.jpeg')" alt="Busang Mongwe" class="slide-img"/>  
-      <p>
-        <b>Busang Mongwe</b>, a University of Limpopo alumnus, specializes in web development, data analysis, and programming languages like Python, JS, and C++.
-        As the founder of SmartCru Tech, he offers mentorship and consultation to startups and students.
-      </p>
+      <div style="display: flex;">
+        <img :src="require('@/assets/Busang.jpeg')" alt="Busang Mongwe" class="slide-img"/>  
+        <p>
+           <b>Busang Mongwe</b>, a University of Limpopo alumnus, specializes in web development, data analysis, and programming languages like Python, JS, and C++.
+           As the founder of SmartCru Tech, he offers mentorship and consultation to startups and students.
+         </p>
+      </div>
       <a href="mailto:busangmongwe37@gmail.com" class="btn">Contact Me</a>
     </div>
 
     <div v-show="current === 2" class="slide">
-      <img src="images/nhleko.jpeg" alt="Nhleko Mabunda" class="slide-img" />
-      <p>
-        <b>Nhleko Success Mabunda</b> has strong skills in Java, Python, and C++, as well as OS configuration, networking, and computer engineering.
-        He is also proficient with Kali Linux, virtualization, and troubleshooting.
-      </p>
+      <div style="display: flex;">
+        <!--Still waiting for professional picture-->
+        <img :src="require('@/assets/nhleko.jpeg')" alt="Nhleko Mabunda" class="slide-img" />
+        <p>
+          <b>Nhleko Success Mabunda</b> has strong skills in Java, Python, and C++, as well as OS configuration, networking, and computer engineering.
+          He is also proficient with Kali Linux, virtualization, and troubleshooting.
+        </p>
+      </div>
       <a href="mailto:nhlekosuccessmabunda9@gmail.com" class="btn">Contact Me</a>
     </div>
 
@@ -78,20 +83,17 @@ export default {
   border-radius: 10px;
   background: #DCDCDC;
 }
-
 .slide {
   padding: 20px;
   animation: fade 0.5s ease-in-out;
 }
-
 .slide-img {
-  width: 180px;
+  width: 280px;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin: 0 15px 15px 0;
 }
-
-.about_btn {
+.btn {
     text-decoration: none;
     padding: 8px 16px;
     background-color: #808080;
@@ -102,11 +104,10 @@ export default {
     border-bottom: solid 2px blue;
     cursor: pointer;     
 }
-
 .btn:hover {
-  background: #1259a3;
+    border-bottom: solid 2px blue;
+    cursor: pointer;
 }
-
 .slideshow_logo {
   color: #1976d2;
   text-decoration: none;
@@ -157,5 +158,12 @@ export default {
   to {
     opacity: 1;
   }
+}
+
+@media only screen and (max-width: 960px){
+  .slide-img {
+  width: 220px;
+  height: auto;
+}
 }
 </style>
