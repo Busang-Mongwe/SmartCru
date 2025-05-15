@@ -7,18 +7,33 @@
 </div>
 
 <!--Body Content Component-->
-<BodyContent/>
+<div>
+    <BodyContent/>
+</div>
 
+<!--About Component-->
+<div id="about">
+    <AboutContent/>
+</div>
+
+<!--Services Component-->
+<div id="services">
+    <ServiceContent/>
+</div>
 <!--Slide Show Component-->
-<SlideShow/>
+<div>
+    <SlideShow/>
+</div>
 
 </template>
 <script>
+import AboutContent from '@/components/AboutContent.vue';
 import BodyContent from '@/components/BodyContent.vue';
+import ServiceContent from '@/components/ServiceContent.vue';
 import SlideShow from '@/components/SlideShow.vue';
 export default{
     name: 'HomePage',
-    components: { BodyContent, SlideShow },
+    components: { BodyContent, SlideShow, AboutContent, ServiceContent },
 }
 </script>
 

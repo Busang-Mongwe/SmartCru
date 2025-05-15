@@ -54,13 +54,14 @@ export default{
 <style scoped> 
 .body_content{
     display: flex;
+    max-width: 1560px;
     width: 98%;
     justify-content: center;
     text-align: center;
     background-color: #DCDCDC;
     border: 2px solid #ccc;
     border-radius: 10px;
-    margin: 4px auto;
+    margin: 20px auto;
     padding: 12px;
     overflow-wrap: break-word;
     word-break: break-word;

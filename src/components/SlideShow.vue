@@ -11,7 +11,7 @@
       <p>
         We aim to expose students to real-world tech challenges and bridge usability gaps we observe in poorly designed websites. SmartCru offers web & mobile development, electronics, and digital marketing.
       </p>
-      <router-link class="btn" to="/about">About</router-link>
+      <router-link class="btn" :to="{ path: '/', hash: '#about'}">About</router-link>
     </div>
 
     <div v-show="current === 1" class="slide">

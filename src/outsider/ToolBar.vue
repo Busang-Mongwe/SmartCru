@@ -17,12 +17,12 @@
           <span>Home</span>
     </router-link></li>
 
-    <li><router-link to="/about">
+    <li><router-link :to="{ path: '/', hash: '#about'}">
         <font-awesome-icon icon="user-circle" class="icon"/>
         <span>About</span>
     </router-link></li>
 
-    <li><router-link to="/services">
+    <li><router-link :to="{ path: '/', hash: '#services' }">
         <font-awesome-icon icon="gears" class="icon"/>
         <span>Services</span>
         </router-link></li>
