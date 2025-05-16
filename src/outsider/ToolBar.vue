@@ -27,7 +27,7 @@
         <span>Services</span>
         </router-link></li>
 
-    <li><router-link to="/contact">
+    <li><router-link :to="{ path: '/', hash: '#contact' }">
         <font-awesome-icon icon="user-circle" class="icon"/>
         <span>Contact</span>
         </router-link></li>

@@ -1,6 +1,6 @@
 <template>
     <div class="about_container">
-        <div style="width: 480px; height: auto;">
+        <div style="max-width: 480px; width: 100%; height: auto; padding: 10px;">
             <p>Two directors who were once high school students created the SmartCru. Although they enrolled in different
                 courses -Bsc in Mathematical Science and Bsc in Physical Science graduated from <a href="https://www.ul.ac.za"><i>University of Limpopo</i></a>.
                 SmartCru is an IT solutions firm that primarily helps businesses by creating and managing websites.
@@ -45,5 +45,11 @@ img{
     border: solid 1px #ddd;
     border-radius: 6px;
     margin: 0 10px;
+}
+@media only screen and (max-width: 960px){
+    .about_container{
+        display: grid;
+        width: 98%;
+    }
 }
 </style>

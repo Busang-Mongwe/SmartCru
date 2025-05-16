@@ -24,16 +24,22 @@
 <div>
     <SlideShow/>
 </div>
+<!--Contact Component-->
+<div id="contact">
+    <ContactContent/>
+</div>
+
 
 </template>
 <script>
 import AboutContent from '@/components/AboutContent.vue';
 import BodyContent from '@/components/BodyContent.vue';
+import ContactContent from '@/components/ContactContent.vue';
 import ServiceContent from '@/components/ServiceContent.vue';
 import SlideShow from '@/components/SlideShow.vue';
 export default{
     name: 'HomePage',
-    components: { BodyContent, SlideShow, AboutContent, ServiceContent },
+    components: { BodyContent, SlideShow, AboutContent, ServiceContent, ContactContent },
 }
 </script>
 

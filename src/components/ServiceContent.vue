@@ -1,6 +1,6 @@
 <template>
     <div class="service_container">
-        <div class="about_services">
+        <div style="max-width: 480px; width: 100%; height: auto; padding: 10px;;">
             <p>
                 Transforming businesses through technology and unlocking digital success for businesses.
                 We offer professional audit services designed to meticulously review and refine projects before publication to ensure that it meets the standard of quality and accuracy.
@@ -55,5 +55,11 @@ img{
 .btn:hover{
     border-bottom: solid 2px blue;
     cursor: pointer;
+}
+@media only screen and (max-width: 960px){
+    .service_container{
+        display: grid;
+        width: 98%;
+    }
 }
 </style>

@@ -69,7 +69,7 @@ template{
 }
 input{
     display: block;
-    width: 97%;
+    width: 94%;
     margin: 10px 0;
     padding: 8px;
 }
