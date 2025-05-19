@@ -130,6 +130,12 @@ img{
         display: grid;
         width: 98%;
     }
+}
+@media only screen and (max-width: 960px){
+    .body_content{
+        display: grid;
+        width: 98%;
+    }
     img{
         height: 420px;
         width: 420px;

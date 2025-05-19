@@ -56,10 +56,26 @@ img{
     border-bottom: solid 2px blue;
     cursor: pointer;
 }
+@media only screen and ( max-width: 1800px){
+    .service_container{
+        display: grid;
+        width: auto;
+        padding: 0 6px;
+    }
+    .service_container p{
+        width: 90%;
+        margin: 10px auto;
+    }
+}
 @media only screen and (max-width: 960px){
     .service_container{
         display: grid;
         width: 98%;
     }
+    img{
+        width: 90%;
+        margin: 10px auto;
+    }
 }
+
 </style>
