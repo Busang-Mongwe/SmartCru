@@ -1,5 +1,7 @@
 <template>
+    
     <div class="about_container">
+        
         <div class="about_smartcru">
             <p>Two directors who were once high school students created the SmartCru. Although they enrolled in different
                 courses -Bsc in Mathematical Science and Bsc in Physical Science graduated from <a href="https://www.ul.ac.za"><i>University of Limpopo</i></a>.
@@ -13,6 +15,7 @@
                 broaden our offerings to include electronics services providers, which will enhance our networking offerings.
             </p>        
         </div>
+        <!--#endregion-->
         <div>
             <router-link to="/services">
                 <img :src="require('@/assets/laptop.png')"/>
